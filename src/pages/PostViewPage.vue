@@ -2,6 +2,7 @@
   <div class="post-view-page">
     <post-view v-if="post" :post="post"/>
     <p v-else>게시글 불러오는 중...</p>
+    <router-link :to="{ name: 'PostEditPage', params: { postId } }">수정</router-link>
     <router-link :to="{ name: 'PostListPage' }">목록</router-link>
   </div>
 </template>
